@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <cstring>
 
 int	main(int ac, char **av)
 {
@@ -35,7 +36,7 @@ int	main(int ac, char **av)
 	}
 	outfile = av[1];
 	outfile.append(".replace");
-	ofs.open(outfile);
+	ofs.open(outfile.c_str());
 	if (ofs.fail())
 	{
 		std::cout << "open error" << std::endl; 
