@@ -36,7 +36,7 @@ int	main(int ac, char **av)
 	}
 	outfile = av[1];
 	outfile.append(".replace");
-	ofs.open(outfile.c_str());
+	ofs.open(outfile.c_str());//open이 c스타일 문자열을 인자로 요한다
 	if (ofs.fail())
 	{
 		std::cout << "open error" << std::endl; 

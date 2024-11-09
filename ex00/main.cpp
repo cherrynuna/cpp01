@@ -2,12 +2,12 @@
 
 int	main(void)
 {
-	Zombie	stack("stack1");
-	Zombie	*heap = newZombie("heap1");
+	Zombie	stack("stack");
+	Zombie	*heap = newZombie("heap");
 
 	stack.announce();
 	heap->announce();
-	randomChump("heap2");
+	randomChump("stack2");
 
 	delete heap;//프리
 	// heap->announce(); <- heap-use-after-free case
