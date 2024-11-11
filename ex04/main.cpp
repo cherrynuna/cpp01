@@ -9,6 +9,7 @@ bool	replace(char *infile, std::string s1, std::string s2)
 	std::string		outfile;
 	std::string		content;
 	std::size_t 	s1_len = s1.length();
+	std::size_t 	s2_len = s2.length();
 
 	if (s1_len == 0)
 	{
@@ -39,6 +40,7 @@ bool	replace(char *infile, std::string s1, std::string s2)
 		{
 			content.erase(pos, s1_len);
 			content.insert(pos, s2);
+			pos += s2_len;
 		}
 		ofs << content;
 		if (!ifs.eof())
